@@ -17,4 +17,4 @@ Compare your answer to mine found in the `CompletedExercises` folder
 
 ### Exercise 3
 
-1. Using function composition, create a function named `wordCount` that counts the words in a string. 
+1. Using function composition, create a function named `wordCount` that returns the number of words in a sentence.
