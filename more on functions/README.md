@@ -1,5 +1,7 @@
 # Exercises
 
+Note: You can find completed exercises in the `CompletedExercises` folder
+
 ### Exercise 1
 
 1. Write an infix function named `~=` that takes two Strings and returns a Bool if the first letter of each string is the same
@@ -7,7 +9,7 @@
 
 Hint: You're going to need some functions from the String Module http://package.elm-lang.org/packages/elm-lang/core/4.0.0/String
 
-Compare your answer to mine found in the `CompletedExercises` folder
+
 
 ### Exercise 2
 

@@ -4,3 +4,4 @@ dist
 .DS_Store
 bundle.js
 app.css.map
+Junk.elm
