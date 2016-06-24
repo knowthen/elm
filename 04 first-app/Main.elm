@@ -24,6 +24,7 @@ initModel =
 
 type Msg
     = AddCalorie
+    | Clear
 
 
 update : Msg -> Model -> Model
@@ -31,6 +32,9 @@ update msg model =
     case msg of
         AddCalorie ->
             model + 1
+
+        Clear ->
+            initModel
 
 
 
@@ -47,6 +51,11 @@ view model =
             , onClick AddCalorie
             ]
             [ text "Add" ]
+        , button
+            [ type' "button"
+            , onClick Clear
+            ]
+            [ text "Clear" ]
         ]
 
 

@@ -11,12 +11,18 @@ import String
 
 
 type alias Model =
-    { calories : Int, input : Int }
+    { calories : Int
+    , input : Int
+    , error : Maybe String
+    }
 
 
 initModel : Model
 initModel =
-    { calories = 0, input = 0 }
+    { calories = 0
+    , input = 0
+    , error = Nothing
+    }
 
 
 
@@ -24,7 +30,7 @@ initModel =
 
 
 type Msg
-    = AddMeal
+    = AddCalorie
     | Input String
     | Clear
 
@@ -32,7 +38,7 @@ type Msg
 update : Msg -> Model -> Model
 update msg model =
     case msg of
-        AddMeal ->
+        AddCalorie ->
             { model
                 | calories = model.calories + model.input
                 , input = 0
@@ -41,10 +47,16 @@ update msg model =
         Input val ->
             case String.toInt val of
                 Ok input ->
-                    { model | input = input }
+                    { model
+                        | input = input
+                        , error = Nothing
+                    }
 
                 Err err ->
-                    model
+                    { model
+                        | input = 0
+                        , error = Just err
+                    }
 
         Clear ->
             initModel
@@ -69,9 +81,10 @@ view model =
                 )
             ]
             []
+        , div [] [ text (Maybe.withDefault "" model.error) ]
         , button
             [ type' "button"
-            , onClick AddMeal
+            , onClick AddCalorie
             ]
             [ text "Add" ]
         , button
