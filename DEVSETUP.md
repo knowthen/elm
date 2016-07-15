@@ -1,6 +1,6 @@
 # Development Environment Setup Steps
 
-1. Install Recent Version of **Nodejs** by downloading and running the installer found at https://nodejs.org/en/
+1. Install Recent Version of **Nodejs** by downloading and running the installer found at https://nodejs.org/en/ or use the Node Version Manager found at https://github.com/creationix/nvm
 2. Install **Elm** by keying the command `npm install -g elm`
 3. Install the atom editor located at https://atom.io/
 4. Install the **language-elm** using the atom package manager (apm), by keying the command `apm install language-elm`
