@@ -1,28 +1,23 @@
 # Exercises
 
-### Initial Setup
-
-You need to install the dependancies by running the following two commands
-```
-elm package install
-npm install
-```
-
-Create a new elm file named
-
 ### Exercise 1
 
-Complete in the following file: `Exercise1.elm`
+1. Create a new file named `Exercise1.elm`
+2. Install the Html module
+3. Import the Html Module into the `Exercise1.elm` file
+3. Show your name on the page
 
-1. Import the Html Module
-2. Show your name on the page
+See the Completed Exercise in : `./CompletedExercises/Exercise1.elm`
+
 
 ### Exercise 2
 
-Complete in the following file: `Exercise2.elm`
+1. Create a new file named `Exercise2.elm`
+2. Import the Html Module
+3. Create a function that capitalizes names longer than 10 characters
+4. Display the name in appropriate capitalized form with the length of the name right next to it like the following: "James Moore - name length: 11"
 
-1. Import the Html Module
-2. Create a function that capitalizes names longer than 10 characters
-3. Display the name in appropriate capitalized form with the length of the name right next to it like the following: "James Moore - name length: 11"
+
+See the Completed Exercise in : `./CompletedExercises/Exercise2.elm`
 
 Hint: You're going to need some functions from the String Module http://package.elm-lang.org/packages/elm-lang/core/4.0.0/String
