@@ -26,6 +26,6 @@ See the Completed Exercise in : `./CompletedExercises/Exercise2.elm`
 ### Exercise 3
 
 1. Using function composition, create a function named `wordCount` that returns the number of words in a sentence.
-2. Call the `wordCount` function with any sentance and display the result on the page.
+2. Call the `wordCount` function with any sentence and display the result on the page.
 
 See the Completed Exercise in : `./CompletedExercises/Exercise3.elm`
