@@ -4,10 +4,6 @@ import Html
 import String
 
 
-(~=) a b =
-    String.left 1 a == String.left 1 b
-
-
 wordCount =
     String.words >> List.length
 
