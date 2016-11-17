@@ -3,7 +3,6 @@ module Main exposing (..)
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
-import Html.App as App
 import String
 
 
@@ -209,12 +208,12 @@ player player =
         , div []
             [ text player.name ]
         , button
-            [ type' "button"
+            [ type_ "button"
             , onClick (Score player 2)
             ]
             [ text "2pt" ]
         , button
-            [ type' "button"
+            [ type_ "button"
             , onClick (Score player 3)
             ]
             [ text "3pt" ]
@@ -240,20 +239,20 @@ playerForm : Model -> Html Msg
 playerForm model =
     Html.form [ onSubmit Save ]
         [ input
-            [ type' "text"
+            [ type_ "text"
             , placeholder "Add/Edit Player..."
             , onInput Input
             , value model.name
             ]
             []
-        , button [ type' "submit" ] [ text "Save" ]
-        , button [ type' "button", onClick Cancel ] [ text "Cancel" ]
+        , button [ type_ "submit" ] [ text "Save" ]
+        , button [ type_ "button", onClick Cancel ] [ text "Cancel" ]
         ]
 
 
-main : Program Never
+main : Program Never Model Msg
 main =
-    App.beginnerProgram
+    Html.beginnerProgram
         { model = initModel
         , view = view
         , update = update

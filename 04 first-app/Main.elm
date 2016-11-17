@@ -3,7 +3,6 @@ module Main exposing (..)
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
-import Html.App as App
 
 
 -- model
@@ -47,21 +46,21 @@ view model =
         [ h3 []
             [ text ("Total Calories: " ++ (toString model)) ]
         , button
-            [ type' "button"
+            [ type_ "button"
             , onClick AddCalorie
             ]
             [ text "Add" ]
         , button
-            [ type' "button"
+            [ type_ "button"
             , onClick Clear
             ]
             [ text "Clear" ]
         ]
 
 
-main : Program Never
+main : Program Never Model Msg
 main =
-    App.beginnerProgram
+    Html.beginnerProgram
         { model = initModel
         , update = update
         , view = view
