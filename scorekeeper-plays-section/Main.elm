@@ -89,7 +89,7 @@ deletePlay model play =
             List.map
                 (\player ->
                     if player.id == play.playerId then
-                        { player | points = player.points - 1 * play.points }
+                        { player | points = player.points - play.points }
                     else
                         player
                 )
