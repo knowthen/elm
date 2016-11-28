@@ -18,6 +18,7 @@ type alias Model =
 
 initModel : Model
 initModel =
+    -- Model 0 0 Nothing
     { calories = 0
     , input = 0
     , error = Nothing
@@ -91,7 +92,6 @@ view model =
             , onClick Clear
             ]
             [ text "Clear" ]
-        , p [] [ text (toString model) ]
         ]
 
 
