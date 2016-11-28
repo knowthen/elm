@@ -2,7 +2,9 @@
 This repo is the source companion to the following course on Learning Elmlang:
 http://courses.knowthen.com/courses/elm-for-beginners
 
-This course teaches beginners how to write frontend web apps using the awesome functional programming language: Elmlang
+This course teaches beginners how to write frontend web apps using the awesome functional programming language: [Elmlang](http://elm-lang.org/)
+
+## Updated for Elm 0.18
 
 #### Why you should take this course?
 
