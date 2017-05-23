@@ -7,17 +7,20 @@ cart =
     [ { name = "Lemon", qty = 1, freeQty = 0 }
     , { name = "Apple", qty = 5, freeQty = 0 }
     , { name = "Pear", qty = 10, freeQty = 0 }
+    , { name = "Banana", qty = 20, freeQty = 0 }
     ]
 
 
-free minQty freeQty item =
-    if item.freeQty == 0 && minQty > 0 then
-        { item | freeQty = item.qty // minQty * freeQty }
-    else
-        item
-
+free item =
+  if item.qty >= 10 && item.freeQty == 0 then
+    {item | freeQty = 3}
+  else if item.qty >= 5 && item.freeQty == 0 then
+    {item | freeQty = 1}
+  else
+    item
 
 main =
-    List.map ((free 10 3) >> (free 5 1)) cart
-        |> toString
-        |> Html.text
+    List.map free cart
+    |> toString
+    |> Html.text
+
