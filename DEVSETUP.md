@@ -11,9 +11,9 @@
 11. Unzip the downloaded file and move the `elm-format` executable to a location in your PATH variable, such as `mv ~/Downloads/elm-format /usr/local/bin/elm-format`
 12. Install the `elm-format` Atom Package *(Note: different from elm-format command)*, by keying `apm install elm-format`
 13. Start Atom, Open up Settings `CMD + ,`, click `Packages`, filter by `elm`, then click on the `elm-format` package's `settings` button. Set the `elm-format` command path setting and veryify the `format on save` checkbox is checked.
-14. Install atom linter by keying `apm install linter`
+14. Install atom linter by keying `apm install linter`. 
 15. Install the elm linter by keying `apm install linter-elm-make`
-16. Locate and copy the path and file for the `elm-make` command by keying the command `which elm-make` for mac or `where.exe elm-make` on windows.
+16. Locate and copy the path and file for the `elm-make` command by keying the command `which elm-make` for mac or `where.exe elm-make` on windows. (You may need to close atom and reopen it first. Say yes when it asks to install dependencies.)
 17. Open the `linter-elm-make` settings page in atom as you did in steps 7 and 13, then click the settings button next to `linter-elm-make` and then set the `elm-make` setting to the copied value from the prior step.
 
 Your atom / elm dev environment should be good to go!
