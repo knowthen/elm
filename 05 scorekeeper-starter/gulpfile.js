@@ -10,10 +10,9 @@ var gulp = require('gulp'),
 
 var cmd = 'elm make ./Main.elm --output ./bundle.js';
 clear();
-gulp.task('default', ['server', 'watch', 'elm']);
 
 gulp.task('watch', function(cb) {
-  gulp.watch('**/*.elm', ['elm']);
+  gulp.watch('**/*.elm', gulp.series('elm'));
 });
 
 gulp.task('server', function(done) {
@@ -41,3 +40,5 @@ gulp.task('elm', function(cb) {
   });
   counter++;
 });
+
+gulp.task('default', gulp.series('server', 'watch', 'elm'));
